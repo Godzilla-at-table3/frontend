@@ -26,7 +26,7 @@ Describe at least:
   - Kenny:
   - Monica: Inspire innovation out of the box thinking.
   - TJ:
-  - Nick: Work with members for effective methods to accomlish our goals and work plans.
+  - Nick: Work with members for effective methods to accomplish our goals and work plans.
 
 - In which professional competencies do you each want to develop greater strength?
 

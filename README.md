@@ -20,20 +20,20 @@ Describe at least:
   - Kenny: Leadership, Technical skills, Communication
   - Monica: Curiosity, Communication, Driven
   - TJ:
-  - Nick:
+  - Nick: Leadership, Processes, Flexibility
 
 - How can you best utilize these strengths in the execution of your project?
   - Kenny:
   - Monica: Inspire innovation out of the box thinking.
   - TJ:
-  - Nick:
+  - Nick: Work with members for effective methods to accomlish our goals and work plans.
 
 - In which professional competencies do you each want to develop greater strength?
 
   - Kenny: Curiosity, Technical Skills
   - Monica: Technical Skills, Tool Competency, Innovation
   - TJ:
-  - Nick:
+  - Nick: Technical Skill on backend/frontend, Creativity
 
 Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
 Review the code in the morning and speak about modifications made the night before merging to main branch.
@@ -75,7 +75,7 @@ Describe at least:
   - Kenny: 9am -6pm PST
   - Monica: 9am - 6pm PST
   - Tj:
-  - Nick:
+  - Nick: 9am - 6pm PST, outside these times may still be available depending on the day ;)
 
 - Communication Platforms:
   - Slack, Remo

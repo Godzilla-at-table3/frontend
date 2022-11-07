@@ -1,0 +1,13 @@
+#header {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: cornflowerblue; 
+}
+
+#header #links {
+    display: flex;
+    gap: 1em;
+}

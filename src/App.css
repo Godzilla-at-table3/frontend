@@ -1,0 +1,22 @@
+#root {
+  background-color:lightskyblue;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid #header, .container-fluid #footer {
+  flex: 0 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+.container-fluid #body {
+  flex: 1 0 auto;
+}

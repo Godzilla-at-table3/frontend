@@ -256,6 +256,15 @@ Instead of generating a single song, generate a whole playlist.
 6. Front end will use a function to randomly choose a song to display. 
 7. Front end will display the received data to the user.
 
-Non-Functional Requirements
+## Non-Functional Requirements
 Protects user’s Spotify account data. Implements Auth0 in such a way so that relevant data is displayed to the user and other user data is not
 Interface is clear and the user is able to interact with it intuitively and effectively.
+
+## Database Schema
+
+- DataModel:
+  - imageURL: String
+  - selectedSong: String
+  - emailAddress: String
+  - playlist (optional): Array (of String)
+

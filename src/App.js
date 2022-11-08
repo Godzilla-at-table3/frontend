@@ -1,60 +1,81 @@
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 import React from 'react';
 import axios from 'axios';
 import './App.css';
 import Header from './Header';
 import Body from './Body';
 import Footer from './Footer';
-// import RandomImg from './RandomImg';
+import About from './About'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       images: [],
       error: false
     }
   }
 
-  getImageData = async ()=>{
-  try{
-    let imageData = await axios.get(`${process.env.REACT_APP_SERVER}/images`);
-    console.log(imageData);
-    this.setState({
-      images: imageData.data,
-    })
-  }catch(error){
-    console.log('ERROR: Image data unavailable', error.response);
-    this.setState({
-      error: true,
-      errorMessage: error.message
-    })
+  getImageData = async () => {
+    try {
+      let imageData = await axios.get(`${process.env.REACT_APP_SERVER}/images`);
+      console.log(imageData);
+      this.setState({
+        images: imageData.data,
+      })
+    } catch (error) {
+      console.log('ERROR: Image data unavailable', error.response);
+      this.setState({
+        error: true,
+        errorMessage: error.message
+      })
+    }
   }
-  }
-  
+
   componentDidMount() {
     this.getImageData();
   }
-  render(){
-  return (
-    <>
-    <Header></Header>
-    {/* <RandomImg
-    getImage ={this.getImage}
-    images= {this.state.images}
-    /> */}
-   <Body
-   images={this.state.images}
-   getImage ={this.getImageData}
-   />
-    <Footer></Footer>
-    </>
-  );
+  render() {
+    return (
+      <>
+        <Router>
+          <Header />
+          <Routes>
+            <Route
+              exact path="/"
+              element={
+                <Body
+                  images={this.state.images}
+                  getImage={this.getImageData}
+                />
+              }
+            ></Route>
+            <Route
+              exact path="/about"
+              element={
+                <About />
+              }
+            ></Route>
+          </Routes>
+          <Footer />
+        </Router>
+      </>
+    );
   };
 }
 
+export default App;
+
+
+
+// * do we need this?
+// import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 /* function App() {
   return (
     <>
@@ -73,5 +94,3 @@ class App extends React.Component {
   );
 }
  */
-
-export default App;

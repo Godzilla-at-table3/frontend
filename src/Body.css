@@ -18,16 +18,15 @@
     align-items: center;
     /* justify-content: space-between; */
     /* gap:100px;} */
- */
 
+img {
+    width: 20%;
+}
 
-img{
-    width:20%;} 
-
-div.expDiv{
+div.expDiv {
     display:flex;
     flex: 1;
     flex-direction: row;
     align-items: center;
-     justify-content: space-between;
+    justify-content: space-around;
 }

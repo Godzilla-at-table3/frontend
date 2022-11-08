@@ -35,11 +35,16 @@ Describe at least:
   - TJ:
   - Nick: Technical Skill on backend/frontend, Creativity
 
-Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
-Review the code in the morning and speak about modifications made the night before merging to main branch.
-Divide the work from to do list.
-Break off and work on functions.
-Check in when a feature is complete and push to own feature branch/staging.
+1. Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
+
+    - Review the code in the morning and speak about modifications made the night before merging to main branch.
+
+    - Divide the work from to do list.
+
+    - Break off and work on functions.
+
+    - Check in when a feature is complete and push to own feature branch/staging.
+
 NOTE: Undoing, Redoing, Replacing, or otherwise steamrolling the project as an individual is considered to be unacceptable. Account for the inevitable divergence of ideas, execution tasks, and assignments of duties here.
 
 ## Conflict Plan
@@ -48,20 +53,23 @@ Your team should agree on a process for handing disagreements, should they arise
 
 - What will be your group’s process to resolve conflict, when it arises?
 
-  - Team meeting, to discuss issues and concerns.
+    - Team meeting, to discuss issues and concerns.
 
 - What will your team do if one person is taking over the project and not letting the other members contribute?
 
-  -Team meeting, to discuss issues and concerns. Make sure the workload is divided fairly at the start of day to try to avoid this kind of issue.
+  - Team meeting, to discuss issues and concerns. Make sure the workload is divided fairly at the start of day to try to avoid this kind of issue.
 
 - How will you approach each other and the challenges of the project knowing that it is
 impossible for all members to be at the exact same place in understanding and skill level?
+
   - Creating a safe space to allow for questions and exploration.
 
 - How will you raise concerns to members who are not adequately contributing?
+
   - Team meeting to discuss if there are any blockers that we can help overcome.
 
 - How and when will you escalate the conflict if your resolution attempts are unsuccessful?
+
   - We will reach out to an instructor when we as a team cannot come to a resolution.
 
 ## Communication Plan

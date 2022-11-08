@@ -1,5 +1,6 @@
 import React from "react";
-import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button';
+import RandomImg from "./RandomImg";
 import './Body.css'
 
 class Body extends React.Component {
@@ -8,13 +9,10 @@ class Body extends React.Component {
             <>
             <div id="body">
                 <h3>... Or Select an image</h3>
-                <div id="imgs">
-                <Image src="https://via.placeholder.com/150"></Image>
-                <Image src="https://via.placeholder.com/150"></Image>
-                <Image src="https://via.placeholder.com/150"></Image>
-                <Image src="https://via.placeholder.com/150"></Image>
-                <Image src="https://via.placeholder.com/150"></Image>
-                </div>
+                <RandomImg className="RandomImg"
+                images={this.props.images}
+                />
+                <Button onClick= {this.props.getImage}>Randomize</Button>
             </div>
             </>
         )

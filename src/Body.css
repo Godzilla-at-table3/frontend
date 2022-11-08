@@ -1,12 +1,23 @@
-#body {
+ #body {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} 
 
-#body #imgs {
+/* #body #imgs {
     display: flex;
     gap: 150px;
-}
+} */
+div.imgageDiv{
+    display:flex;
+    /* flex: 1; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* gap:100px; */
+ }  
+  
+img{
+    width:30%;} 

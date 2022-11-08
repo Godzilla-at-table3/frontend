@@ -159,6 +159,16 @@ Will you be using a PR review workflow? If so, consider:
 - How will you communicate that it’s time to merge?
 
   - Request a team huddle, and reach out via slack.
+
+## WireFrames
+
+![Wireframe](./images/wireframe.jpg)
+
+![Main](./images/mainpage.jpg)
+
+![Main Selected](./images/mainpageselected.jpg)
+
+![About](./images/about.jpg)
   
 ## User Stories
 
@@ -232,6 +242,10 @@ Image Choice – As a user I want to be able to have random multiple image optio
   - Become a mobile app.
   - Create new music
   - Save previously seen images to local storage or cache.
+
+## Data Modeling
+
+![WRC](./images/wrc.jpg)
 
 ## Minimum Viable Product vs Stretch Goals
 

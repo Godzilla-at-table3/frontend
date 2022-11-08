@@ -4,6 +4,9 @@ import './App.css';
 import Header from './Header';
 import Body from './Body';
 import Footer from './Footer';
+import Login from './Login';
+import Logout from './Logout';
+import Profile from './Profile';
 import About from './About'
 import {
   BrowserRouter as Router,

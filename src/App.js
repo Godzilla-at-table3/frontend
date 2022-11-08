@@ -6,12 +6,19 @@ import './App.css';
 import Header from './Header';
 import Body from './Body';
 import Footer from './Footer';
+import Login from './Login';
+import Logout from './Logout';
+import Profile from './Profile';
 
 function App() {
   return (
     <>
     <Header></Header>
-    <Body></Body>
+    <Body>
+      <Login />
+      <Logout />
+      <Profile />
+    </Body>
     <Footer></Footer>
     </>
   );

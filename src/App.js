@@ -13,7 +13,8 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state ={
-      images: []
+      images: [],
+      error: false
     }
   }
 
@@ -25,9 +26,14 @@ class App extends React.Component {
       images: imageData.data,
     })
   }catch(error){
-    console.log('ERROR: Image data unavailable', error.response)
+    console.log('ERROR: Image data unavailable', error.response);
+    this.setState({
+      error: true,
+      errorMessage: error.message
+    })
   }
-  };
+  }
+  
   componentDidMount() {
     this.getImageData();
   }
@@ -41,6 +47,7 @@ class App extends React.Component {
     /> */}
    <Body
    images={this.state.images}
+   getImage ={this.getImageData}
    />
     <Footer></Footer>
     </>

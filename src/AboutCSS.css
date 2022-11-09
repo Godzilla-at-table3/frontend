@@ -39,8 +39,8 @@
     margin-right:5%;  
     padding:1%
   }
-  img{
-    /* width:70%; */
+  .profileImg{
+    width:70%;
     padding:2%;
   }
 .profiles{
@@ -100,6 +100,6 @@ li:before {
   float: left;
   display: list-item;
   list-style-position: inside;
-  width: 20px;
+  width: 2%;
   margin-left: -20px;
 }

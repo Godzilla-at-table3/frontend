@@ -15,7 +15,7 @@ export default class About extends Component {
       </div>
       <div className='profiles'>
       <div className= "kenny">
-        <img src="https://placebear.com/320/240"></img>
+        <img className='profileImg' alt="kenny" src="https://placebear.com/320/240"></img>
         <section>
           <h4>Kenny</h4>
           <p>words</p>
@@ -30,7 +30,7 @@ export default class About extends Component {
         </section>
       </div>
       <div className="nick">
-        <img src="https://placebear.com/320/240"></img>
+        <img className='profileImg' alt="nick"src="https://placebear.com/320/240"></img>
         <section>
           <h4>Nick</h4>
           <p>words</p>
@@ -45,7 +45,7 @@ export default class About extends Component {
         </section>
       </div>
       <div className='tj'>
-        <img  src="https://placebear.com/320/240"></img>
+        <img className='profileImg' alt="tj" src="https://placebear.com/320/240"></img>
         <section>
         <h4>Tj</h4>
           <p>words</p>
@@ -60,7 +60,7 @@ export default class About extends Component {
         </section>
       </div>
       <div className='monica'>
-        <img src="https://placebear.com/320/240"></img>
+        <img className='profileImg' alt="monica"src="https://placebear.com/320/240"></img>
         <section>
         <h4>Monica</h4>
           <p>words</p>

@@ -1,5 +1,7 @@
 import React from "react";
-import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button';
+// import RandomImg from "./RandomImg";
+import ExpImg from "./ExpImg";
 import './Body.css'
 import { withAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
@@ -34,27 +36,23 @@ class Body extends React.Component {
       })
     }
 
-
-
-
   }
+  
 
   render() {
-    return (
-      <>
-        <div id="body">
-          <h3>... Or Select an image</h3>
-          <div id="imgs">
-            <Image src="https://via.placeholder.com/150"></Image>
-            <Image src="https://via.placeholder.com/150"></Image>
-            <Image src="https://via.placeholder.com/150"></Image>
-            <Image src="https://via.placeholder.com/150"></Image>
-            <Image src="https://via.placeholder.com/150"></Image>
-          </div>
-        </div>
-      </>
-    )
-  }
+        return (
+            <>
+            <div id="body">
+                <h3>... Or Select an image</h3>
+                <ExpImg/>
+                {/* <RandomImg className="RandomImg"
+                images={this.props.images}
+                /> */}
+                <Button onClick= {this.props.getImage}>Randomize</Button>
+            </div>
+            </>
+        )
+    }
 }
 
 export default withAuth0(Body);

@@ -9,17 +9,22 @@ import Footer from './Footer';
 import Login from './Login';
 import Logout from './Logout';
 import Profile from './Profile';
+import { withAuth0 } from '@auth0/auth0-react';
 
 function App() {
   return (
     <>
-    <Header></Header>
-    <Body>
-      <Login />
-      <Logout />
-      <Profile />
-    </Body>
-    <Footer></Footer>
+      <Header></Header>
+      {this.props.auth0.isAuthenticated ?
+        <>
+          <Profile />
+          <Body></Body>
+          <Logout />
+        </>
+        :
+        <Login />
+      }
+      <Footer></Footer>
     </>
   );
 }
@@ -43,4 +48,4 @@ function App() {
 }
  */
 
-export default App;
+export default withAuth0(App);

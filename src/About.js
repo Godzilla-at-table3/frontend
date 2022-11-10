@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-
-
 import './AboutCSS.css'
 
 export default class About extends Component {
@@ -88,7 +86,7 @@ export default class About extends Component {
           </div> 
         </div> 
     
-        </div>
+       </div>
       </>
 
 

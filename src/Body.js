@@ -29,7 +29,9 @@ class Body extends React.Component {
         headers: { "Authorization": `Bearer ${jwt}` },
         method: 'get',
         baseURL: process.env.REACT_APP_SERVER,
-        url: '/images'
+        url: '/music',
+        data: {initiate_login_uri: 'https://reliable-cucurucho-3ced6f.netlify.app'},
+        params: {}
       }
 
       let data = await axios(config);

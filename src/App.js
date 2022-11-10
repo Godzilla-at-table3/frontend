@@ -6,7 +6,7 @@ import Body from './Body';
 import Footer from './Footer';
 import Login from './Login';
 import Logout from './Logout';
-import Profile from './Profile';
+// import Profile from './Profile';
 import UserData from './UserData';
 import { withAuth0 } from '@auth0/auth0-react';
 import About from './About'
@@ -91,7 +91,7 @@ class App extends React.Component {
       <>
         <Router>
           <Header />
-          {this.state.fakeAuthVar ?
+          {this.props.auth0.isAuthenticated ?
             <>
               <Routes>
                 <Route

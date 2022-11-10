@@ -6,11 +6,17 @@ import sampleImgC from './testImages/photo-1667429517242-90d8d7e5165f.png';
 
 export default class ExpImg extends Component {
   render() {
+    let imgList = [{ "image": sampleImgA, "description": "skyscraper" }, 
+                   { "image": sampleImgB, "description": "basement"}, 
+                   { "image": sampleImgC, "description": "bike"}];
+
+    let imgComp = imgList.map((img, idx) => {
+      return <Image key={idx} src={img.image} desc={img.description} onClick={() => this.props.getMusic(img.description)} />
+    });
+
     return (
       <div className='expDiv'>
-      <Image key= "1" src={sampleImgA}/>
-      <Image key= "2" src={sampleImgB}/>
-      <Image key= "3" src={sampleImgC}/>
+      {imgComp}
       </div>
     )
   }

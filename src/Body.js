@@ -29,7 +29,7 @@ class Body extends React.Component {
         headers: { "Authorization": `Bearer ${jwt}` },
         method: 'get',
         baseURL: process.env.REACT_APP_SERVER,
-        url: '/images',
+        url: '/music',
         data: {},
         params: {}
       }

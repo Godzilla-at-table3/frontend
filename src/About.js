@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+// import Card from 'react-bootstrap/Card';
+// import CardGroup from 'react-bootstrap/CardGroup';
 
 import './AboutCSS.css'
 
@@ -25,8 +25,8 @@ export default class About extends Component {
             <li>song</li>
             <li>song</li>
           </ul>
-          <a>link</a>
-          <a>link</a>
+          {/* <a>link</a>
+          <a>link</a> */}
         </section>
       </div>
       <div className="nick">
@@ -40,8 +40,8 @@ export default class About extends Component {
             <li>song</li>
             <li>song</li>
           </ul>
-          <a>link</a>
-          <a>link</a>
+          {/* <a>link</a>
+          <a>link</a> */}
         </section>
       </div>
       <div className='tj'>
@@ -55,8 +55,8 @@ export default class About extends Component {
             <li>song</li>
             <li>song</li>
           </ul>
-          <a>link</a>
-          <a>link</a>
+          {/* <a>link</a>
+          <a>link</a> */}
         </section>
       </div>
       <div className='monica'>
@@ -70,8 +70,8 @@ export default class About extends Component {
             <li>song</li>
             <li>song</li>
           </ul>
-          <a>link</a>
-          <a>link</a>
+          {/* <a>link</a>
+          <a>link</a> */}
         </section>
       </div>
       

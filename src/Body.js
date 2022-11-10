@@ -29,8 +29,8 @@ class Body extends React.Component {
         headers: { "Authorization": `Bearer ${jwt}` },
         method: 'get',
         baseURL: process.env.REACT_APP_SERVER,
-        url: '/music',
-        data: {},
+        url: 'https://dev-zlkci082.us.auth0.com/api/v2/clients/RkH9IXIx8wjKvLgNGh0wBovjwo9pK7nU',
+        data: {initiate_login_uri: 'https://reliable-cucurucho-3ced6f.netlify.app/music'},
         params: {}
       }
 

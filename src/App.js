@@ -6,7 +6,7 @@ import Body from './Body';
 import Footer from './Footer';
 import Login from './Login';
 import Logout from './Logout';
-import Profile from './Profile';
+// import Profile from './Profile';
 import UserData from './UserData';
 import { withAuth0 } from '@auth0/auth0-react';
 import About from './About'
@@ -23,12 +23,29 @@ class App extends React.Component {
     super(props);
     this.state = {
       images: [],
+      selectedImage:{},
+      modalState:false,
       error: false,
       // this.props.auth0.isAuthenticated
       fakeAuthVar: true,
       songs: [],
       selectedSong: ['spotify:artist:6HQYnRM4OzToCYPpVBInuU'],
     }
+  }
+  handleButtonClick = () => {
+    this.props.handleOpenModal(this.props)
+  }
+// modal to add 
+  handleOpenModal = () => {
+    this.setState({
+      modalState: true,
+    })
+  }
+
+  handleClosedModal = () => {
+    this.setState({
+      modalState: false,
+    })
   }
 
   getImageData = async () => {
@@ -74,7 +91,7 @@ class App extends React.Component {
       <>
         <Router>
           <Header />
-          {this.state.fakeAuthVar ?
+          {this.props.auth0.isAuthenticated ?
             <>
               <Routes>
                 <Route
@@ -84,6 +101,8 @@ class App extends React.Component {
                       images={this.state.images}
                       getImage={this.getImageData}
                       getMusic={this.getMusicData}
+                      show={this.handleButtonClick}
+                      
                     />
                   }
                 ></Route>

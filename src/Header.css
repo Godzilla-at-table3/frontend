@@ -1,13 +1,40 @@
-#header {
+.Navbar {
     flex-shrink: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: cornflowerblue; 
+    padding: 1%;
+    /* background-color: cornflowerblue;  */
+    background-color: rgb(37, 42, 44);
+    color:white;
+    margin-left: 5%;
+    margin-right:5%;
+}
+span.Header.navbar-brand{
+  padding: 0.1%;
+ margin-left: 2.5%;
+ font-size: 2vmax; 
+ /* color:black; */
+ color:white;
 }
 
-#header #links {
+div.nav-item{
     display: flex;
-    gap: 1em;
-}
+    flex: 30%;  
+    align-items: center;
+    justify-content: right;
+  }
+
+  a.nav-link{
+    font-size: 1.3vmax;
+    padding: 0.5vmax;
+    margin-right: 2.5%;
+    background-color: none;
+    border-radius: 1rem;
+  }
+
+  a.nav-link:hover{
+    color:rgb(12, 12, 11);
+    background-color: rgba(255, 255, 255, 0.874) !important;
+    border-radius: 1rem;
+  }

@@ -11,7 +11,8 @@ class Header extends React.Component {
             <Navbar.Brand className= "Header">Pic My Song</Navbar.Brand>
             <NavItem>
               <Link to="/" className="nav-link">Home</Link>
-                  <Link to="/about" className="nav-link">About Us</Link>
+                <Link to="/user" className="nav-link">User</Link>
+                <Link to="/about" className="nav-link">About Us</Link>
             </NavItem>
           </Navbar>
         )

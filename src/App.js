@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Login from './Login';
 import Logout from './Logout';
 import Profile from './Profile';
+import UserData from './UserData';
 import { withAuth0 } from '@auth0/auth0-react';
 import About from './About'
 import {
@@ -15,12 +16,18 @@ import {
   Route
 } from "react-router-dom";
 
+import SpotifyWebPlayer from 'react-spotify-web-playback';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       images: [],
-      error: false
+      error: false,
+      // this.props.auth0.isAuthenticated
+      fakeAuthVar: true,
+      songs: [],
+      selectedSong: ['spotify:artist:6HQYnRM4OzToCYPpVBInuU'],
     }
   }
 
@@ -40,17 +47,35 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.getImageData();
+  getMusicData = async (desc) => {
+    try {
+      console.log('DESC>>>>' + desc);
+      let musicData = await axios.get(`${process.env.REACT_APP_SERVER}/getSpotifySong?searchQuery=${desc}`);
+      console.log(musicData.data.tracks.items[0].uri);
+      this.setState({
+        selectedSong: [musicData.data.tracks.items[0].uri]
+      });
+
+    } catch (error) {
+      console.log('ERROR: Music data unavailable', error.response);
+      this.setState({
+        error: true,
+        errorMessage: error.message
+      })
+    }
   }
+
+  componentDidMount() {
+    // this.getImageData();
+  }
+  
   render() {
     return (
       <>
         <Router>
           <Header />
-          {this.props.auth0.isAuthenticated ?
+          {this.state.fakeAuthVar ?
             <>
-              <Profile />
               <Routes>
                 <Route
                   exact path="/"
@@ -58,9 +83,18 @@ class App extends React.Component {
                     <Body
                       images={this.state.images}
                       getImage={this.getImageData}
+                      getMusic={this.getMusicData}
                     />
                   }
                 ></Route>
+                <Route
+                  exact path="/user"
+                  element={
+                    <UserData />
+                  }
+                >
+
+                </Route>
                 <Route
                   exact path="/about"
                   element={
@@ -68,6 +102,11 @@ class App extends React.Component {
                   }
                 ></Route>
               </Routes>
+              <SpotifyWebPlayer 
+                  token='BQC-8P1ZDp15pmbiCk8S8rXX1JhhgeAammclZiXbbWA0x26O90XSMvfPyJocT4BwqLwOl6Zpxom12Bl8tpOqvgl5_jdBonslS_EIoB5EHJVbhEgftZxw9NtuDOr4vwU7W2anSg7Q-4zKDtQN8I8EtiKtosYxZtCH-KeqBvMXu29QKSZT8UxrC2kl_BxtujNZxxNtal4B1mFjNqUsAXUe2mbFB4hotwLo'
+                  uris={this.state.selectedSong}
+                  autoPlay={true}
+                />
               <Logout />
             </>
             :
@@ -82,29 +121,5 @@ class App extends React.Component {
 
 export default withAuth0(App);
 
-
-
-// * do we need this?
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-/* function App() {
-  return (
-    <>
-    <Container fluid>
-      <Row id="header">
-        <h1>Image -> Song</h1>
-      </Row>
-      <Row id="body">
-        <Body></Body>
-      </Row>
-      <Row id="footer">
-        <h3>Godzilla @ Table 3</h3>
-      </Row>
-    </Container>
-    </>
-  );
-}
- */
 
 

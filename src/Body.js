@@ -1,8 +1,11 @@
 import React from "react";
+
 import Button from 'react-bootstrap/Button';
+
 // import RandomImg from "./RandomImg";
 import ExpImg from "./ExpImg";
 import './Body.css'
+
 import { withAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 
@@ -44,7 +47,9 @@ class Body extends React.Component {
             <>
             <div id="body">
                 <h3>... Or Select an image</h3>
-                <ExpImg/>
+                <ExpImg
+                  getMusic={this.props.getMusic}
+                />
                 {/* <RandomImg className="RandomImg"
                 images={this.props.images}
                 /> */}

@@ -26,7 +26,9 @@ class Body extends React.Component {
         headers: { "Authorization": `Bearer ${jwt}` },
         method: 'get',
         baseURL: process.env.REACT_APP_SERVER,
-        url: '/images'
+        url: '/images',
+        data: {},
+        params: {}
       }
 
       let data = await axios(config);

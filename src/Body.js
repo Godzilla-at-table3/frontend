@@ -28,7 +28,7 @@ class Body extends React.Component {
       const config = {
         headers: { "Authorization": `Bearer ${jwt}` },
         method: 'get',
-        baseURL: process.env.REACT_APP_SERVER,
+        baseURL: 'https://reliable-cucurucho-3ced6f.netlify.app',
         url: '/music',
         data: {},
         params: {}

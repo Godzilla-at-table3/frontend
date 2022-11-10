@@ -23,12 +23,29 @@ class App extends React.Component {
     super(props);
     this.state = {
       images: [],
+      selectedImage:{},
+      modalState:false,
       error: false,
       // this.props.auth0.isAuthenticated
       fakeAuthVar: true,
       songs: [],
       selectedSong: ['spotify:artist:6HQYnRM4OzToCYPpVBInuU'],
     }
+  }
+  handleButtonClick = () => {
+    this.props.handleOpenModal(this.props)
+  }
+// modal to add 
+  handleOpenModal = () => {
+    this.setState({
+      modalState: true,
+    })
+  }
+
+  handleClosedModal = () => {
+    this.setState({
+      modalState: false,
+    })
   }
 
   getImageData = async () => {
@@ -84,6 +101,8 @@ class App extends React.Component {
                       images={this.state.images}
                       getImage={this.getImageData}
                       getMusic={this.getMusicData}
+                      show={this.handleButtonClick}
+                      
                     />
                   }
                 ></Route>

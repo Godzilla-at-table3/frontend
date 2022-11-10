@@ -21,3 +21,80 @@
 .container-fluid #body {
   flex: 1 0 auto;
 }
+
+
+  
+
+
+.loginButton{
+  width:20%;
+}
+.loginButton:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.loginButton {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, rgb(94, 20, 20));
+  padding: 0;
+}
+.loginButton:disabled {
+  cursor: default;
+}
+.loginButton:-moz-focusring {
+  outline: auto;
+}
+.loginButton svg {
+  display: block;
+  vertical-align: middle;
+}
+.loginButton [hidden] {
+  display: none;
+}
+.loginButton {
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  padding: 1rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+.loginButton span {
+  mix-blend-mode: difference;
+}
+.loginButton:before {
+  --thickness: 4px;
+  border-radius:50%;
+  border: var(--thickness) solid rgb(253, 253, 253);
+  /* border-radius: 999px; */
+  content: "";
+  inset: calc(var(--thickness) * -1);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: scale(1.3);
+  transition: transform 0.2s, opacity 0.2s;
+}
+.loginButton:hover:before {
+  opacity: 1;
+  transform: scale(0.8);
+}
+.loginButton:hover {
+  background-color: transparent;
+  color: black;
+}
+
+  

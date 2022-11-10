@@ -10,7 +10,7 @@ root.render(
 <Auth0Provider
     domain={process.env.REACT_APP_DOMAIN}
     clientId={process.env.REACT_APP_CLIENTID}
-    redirectUri='https://reliable-cucurucho-3ced6f.netlify.app/login/callback'
+    redirectUri='https://dev-zlkci082.us.auth0.com/login/callback'
   >
     <App />
   </Auth0Provider>

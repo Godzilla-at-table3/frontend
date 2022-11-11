@@ -27,7 +27,10 @@
 
 
 .loginButton{
-  width:20%;
+  width:15%;
+  display:flex;
+  justify-content: center;
+  align-self: center;
 }
 .loginButton:before {
   border: 0 solid;
@@ -43,7 +46,7 @@
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 100%;
+  font-size: 1vmax;
   line-height: 1.5;
   margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#000, rgb(94, 20, 20));

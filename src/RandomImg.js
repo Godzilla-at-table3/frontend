@@ -35,12 +35,12 @@ render(){
     <Modal.Header closeButton>
     </Modal.Header>
     <Modal.Body>
-    <Image  src={this.state.imageSelected.url}/>
+    <Image className='modalImg' src={this.state.imageSelected.url}/>
       <p>
      {this.state.imageSelected.description}
       </p>
     </Modal.Body>
-    <Button onClick={()=>{this.props.postImage(this.state.imageSelected)}} variant="primary">Add to Gallery</Button>
+    <Button className= "buttonModal" onClick={()=>{this.props.postImage(this.state.imageSelected)}} variant="primary">Add to Gallery</Button>
   </Modal>
   </div>
   );

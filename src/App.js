@@ -24,6 +24,7 @@ class App extends React.Component {
     this.state = {
       images: [],
       selectedImage:{},
+      savedImages:[],
       modalState:false,
       error: false,
       // this.props.auth0.isAuthenticated
@@ -64,9 +65,12 @@ class App extends React.Component {
     }
   }
 
+
   getMusicData = async (desc) => {
     try {
       console.log('DESC>>>>' + desc);
+      let randomWord= desc[Math.floor(Math.random()*desc.length)]
+      console.log(randomWord);
       let musicData = await axios.get(`${process.env.REACT_APP_SERVER}/getSpotifySong?searchQuery=${desc}`);
       console.log(musicData.data.tracks.items[0].uri);
       this.setState({
@@ -82,8 +86,23 @@ class App extends React.Component {
     }
   }
 
+  postImage =async(newImgObj)=>{
+    try{
+      let url = `${process.env.REACT_APP_SERVER}/music`
+      let savedImgData = await axios.post(url,newImgObj);
+      this.setState({
+        savedImages:[...this.state.savedImages,savedImgData.data]
+      })
+      
+
+    }catch(error){
+      console.log(error)
+
+    }
+  }
+
   componentDidMount() {
-    // this.getImageData();
+    this.getImageData();
   }
   
   render() {

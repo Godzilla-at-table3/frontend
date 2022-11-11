@@ -48,7 +48,7 @@ class Body extends React.Component {
         return (
             <>
             <div id="body">
-                <h3>... Or Select an image</h3>
+                <h3>Click an image to discover a new song</h3>
                 {/* <ExpImg
                   getMusic={this.props.getMusic}
                 /> */}

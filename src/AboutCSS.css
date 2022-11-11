@@ -7,15 +7,31 @@
   margin-right:5%; */
   display:flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
+  text-align: center;  
+}
+.headerabout{
+  font-size: 4vmax;
+  padding: 1% !important;
+}
+.words{
+  font-size: 2.5vmax;
+  text-align: center;
+  padding: 3% !important;
 }
 
-.button{
-  margin-top: auto;
-  border-color: white;
+.buttonDown{
+  /* margin-top: auto; */
+  border-color: rgba(255, 255, 255, 0.444);
   background-color: transparent;
+
   color:white;
-  border-radius: 20px;
+  border-radius: 999px;
+  padding: 1%;
+}
+.buttonDown:hover{
+  background-color: #98bec844;
+  border:none;
 }
 .profiles{
   background-color:#7290A4; 
@@ -43,19 +59,30 @@
     /* padding:1% */
   }
   .profileImg{
-    width:70%;
+    width: 50%;
     padding:2%;
   }
+  .profileImg:hover{
+    opacity: 50%;
+  }
 .profiles{
-  display:flex;
-  flex-grow: 1;
+  display:grid;
+  grid-template-columns: repeat( auto-fit, minmax(25%, 1fr) );
+  
+  /* display:flex; */
+  grid-template-areas: 
+  "kenny" "nick" "tj" "monica";
+
+  /* flex-grow: 1; */
   text-align: center;
  
   
 }
 .kenny{
+  grid-area: kenny;
+  grid-column: 1/2;
   flex-grow: 1;
-  height: 100%;
+  /* height: 25%; */
   background-color: #98BEC8 !important;
   border:none;
   color:white;
@@ -63,8 +90,9 @@
 }
 
 .nick {
+  grid-column: 2/3;
   flex-grow: 1;
-  height: 100%;
+  /* height: 25%; */
   background-color: #7290A4 !important;
   /* background-color: #1C323D !important; */
   border:none;
@@ -73,8 +101,9 @@
 }
 
 .tj {
+  grid-column: 3/4;
   flex-grow: 1;
-  height: 100%;
+
   /* background-color: #7290A4 !important; */
   background-color: #314964 !important;
   border:none;
@@ -84,8 +113,8 @@
 
 
 .monica {
-  flex-grow: 1;
-  height: 100%;
+  grid-column: 4/5;
+
   /* background-color: #314964 !important; */
   background-color: #1C323D !important;
   border:none;
@@ -104,18 +133,15 @@ li:before {
   width: 2%;
   margin-left: -20px;
 }
+h4{
+  font-size:50%;
+}
 
-div.container {
-  min-height: 100vh;
-  width: 100%;
-  display: grid; 
-  grid-template-columns: auto; 
-  grid-template-rows:minmax(50px auto);
-  gap: 0px 0px; 
-  padding: none;
-  grid-template-areas: 
-    ".";
-    background-color: #1C323D;
-
-
+p,ul{
+  padding:5%;
+  font-size: 1vmax;
+}
+section{
+  padding:5%;
+  text-align: center;
 }

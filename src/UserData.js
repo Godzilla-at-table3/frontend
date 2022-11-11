@@ -88,13 +88,14 @@ class UserData extends React.Component {
   }
 
   render() {
+    console.log(this.state.userRecords);
     let userRecordsComponents = this.state.userRecords.map((record) => {
       return (
         <>
           <Card className="bg-dark text-white" style={{ width: '18rem' }}>
             <Card.Img
-              src="https://via.placeholder.com/732x270"
-              alt="Card image"
+              src={record.imgURL}
+              alt={record.selectedSong}
             />
             <Card.ImgOverlay>
               <Dropdown>
